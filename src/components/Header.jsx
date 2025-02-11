@@ -1,3 +1,4 @@
+import moment from "moment";
 import logo from "../assets/logo.png"
 const Header = () => {
     return (
@@ -6,6 +7,7 @@ const Header = () => {
                 <img className="w-[350px]" src={logo} alt="" />
             </div>
             <h1 className="text-gray-400"> Journalism Without Fear or Favour</h1>
+            <p>{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</p>
         </div>
     );
 };
