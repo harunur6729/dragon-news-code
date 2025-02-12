@@ -1,10 +1,13 @@
+import SocialLogin from "../SocialLogin";
 
 const RightNavbar = () => {
-    return (
-        <div>
-            <h1 className="font-semibold"> Login With</h1>
-        </div>
-    );
+  return (
+    <div>
+      <div>
+        <SocialLogin></SocialLogin>
+      </div>
+    </div>
+  );
 };
 
 export default RightNavbar;
