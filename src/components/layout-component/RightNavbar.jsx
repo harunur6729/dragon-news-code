@@ -1,3 +1,4 @@
+import FindUs from "../FindUs";
 import SocialLogin from "../SocialLogin";
 
 const RightNavbar = () => {
@@ -5,6 +6,7 @@ const RightNavbar = () => {
     <div>
       <div>
         <SocialLogin></SocialLogin>
+        <FindUs></FindUs>
       </div>
     </div>
   );
