@@ -7,3 +7,6 @@ body{
   @apply bg-white text-black;
 }
 
+a.active{
+  background-color: #E7E7E7;
+}

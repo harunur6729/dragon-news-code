@@ -13,7 +13,7 @@ const LeftNavbat = () => {
       <h1 className="font-semibold">All Caterogy({categories.length})</h1>
       <div className="flex flex-col gap-2">
         {categories.map((category) => (
-          <NavLink to={`/category/${category.category_id}`} className="btn hover:bg-blue-300 bg-gray-200 text-black mx-6 border-none " key={category.category_id}>{category.category_name}</NavLink>
+          <NavLink to={`/category/${category.category_id}`} className="btn hover:bg-[#E7E7E7] bg-white text-black mx-6 border-none " key={category.category_id}>{category.category_name}</NavLink>
         ))}
       </div>
     </div>
