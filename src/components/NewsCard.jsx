@@ -38,7 +38,8 @@ const NewsCard = ({ singleNews }) => {
       <div>
         <h1 className="font-semibold">{title}</h1>
         <img className="w-fullgit" src={image_url} alt="" />
-        <p>{details}</p>
+        <p>{details} </p>
+        <button className="text-amber-600 font-semibold">Read More</button>
 
         {/* lower part start */}
         <div className="flex justify-between px-6">
@@ -47,12 +48,12 @@ const NewsCard = ({ singleNews }) => {
                 <FaStar className="text-red-300"></FaStar>
                 <FaStar className="text-red-300"></FaStar>
                 <FaStar className="text-red-300"></FaStar>
-                <p>{rating.number}</p>
+                <p className="items-center">{rating.number}</p>
             </div>
 
             <div className="flex gap-2 py-4">
                 <FaEye></FaEye>
-                <p>{total_view}</p>
+                <p className="items-center">{total_view}</p>
             </div>
         </div>
       </div>
