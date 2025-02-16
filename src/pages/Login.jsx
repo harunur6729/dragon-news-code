@@ -34,7 +34,7 @@ const Login = () => {
           <div className="form-control mt-6">
             <button className="btn btn-neutral rounded-none font-bold">Login</button>
           </div>
-          <p>don't have an account? <span className="text-red-500">Register</span></p>
+          <p>Don't have an account? <span className="text-red-500">Register</span></p>
         </form>
       </div>
     </div>
