@@ -1,16 +1,36 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+
 const Login = () => {
+  const { userLogin, setUser} = useContext(AuthContext);
+const handleSubmit =(e)=>{
+  e.preventDefault();
+  const form = e.target;
+  const email =form.email.value;
+  const password= form.password.value;
+  userLogin(email, password)
+  .then(result =>{
+    const user = result.user;
+    setUser(user)
+  })
+  .catch((error) => {
+    alert(error.code);
+  });
+  console.log({email, password})
+}
    
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="card bg-white w-full max-w-lg shrink-0 shadow-2xl py-6 rounded-none">
         <h2 className="text-3xl font-bold text-center">Login your Account  </h2>
-        <form className="card-body">
+        <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control ">
             <label className="label">
               <span className="label-text">Email</span>
             </label>
             <input
+              name="email"
               type="email"
               placeholder="email"
               className="input input-bordered bg-slate-200"
@@ -22,6 +42,7 @@ const Login = () => {
               <span className="label-text">Password</span>
             </label>
             <input
+            name="password"
               type="password"
               placeholder="password"
               className="input input-bordered bg-slate-200"
