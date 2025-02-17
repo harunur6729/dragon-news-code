@@ -37,7 +37,7 @@ const NewsCard = ({ singleNews }) => {
       {/* middle part start */}
       <div>
         <h1 className="font-semibold">{title}</h1>
-        <img className="w-fullgit" src={image_url} alt="" />
+        <img className="w-full" src={image_url} alt="" />
         <p>{details} </p>
         <button className="text-amber-600 font-semibold">Read More</button>
 
