@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import { FaEye, FaHome, FaShare, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ singleNews }) => {
   const {
+    _id,
     others_info,
     rating,
     total_view,
@@ -38,8 +40,10 @@ const NewsCard = ({ singleNews }) => {
       <div>
         <h1 className="font-semibold">{title}</h1>
         <img className="w-full" src={image_url} alt="" />
-        <p>{details} </p>
-        <button className="text-amber-600 font-semibold">Read More</button>
+        <p>{details.slice(0,150)}...{" "} 
+        <Link to={`/news/${singleNews._id}`} className="text-amber-600 font-semibold"> Read More</Link>
+        </p>
+        
 
         {/* lower part start */}
         <div className="flex justify-between px-6">
