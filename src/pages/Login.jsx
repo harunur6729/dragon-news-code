@@ -7,7 +7,7 @@ const Login = () => {
   const [error, setError] = useState({});
 
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const handleSubmit =(e)=>{
   .catch( err => {
     setError({...error, login: err.code});
   });
-  console.log({email, password})
+  // console.log({email, password})
 }
    
   return (
